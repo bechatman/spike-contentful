@@ -26,11 +26,17 @@ test('errors without a "spaceId"', t => {
   )
 })
 
+<<<<<<< HEAD
 test('errors without "addDataTo"', t => {
   t.throws(
     () => {
       new Contentful({ accessToken: 'xxx', spaceId: 'xxx' })
     }, // eslint-disable-line
+=======
+test('errors without "addDataTo"', (t) => {
+  t.throws(
+    () => { new Contentful({ accessToken: process.env.accessToken, spaceId: process.env.spaceId, preview: false }) }, // eslint-disable-line
+>>>>>>> Remove preview validation test
     'ValidationError: [spike-contentful constructor] option "addDataTo" is required'
   )
 })
