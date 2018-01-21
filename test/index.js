@@ -101,7 +101,6 @@ test('initializes with "limit" filter', t => {
   const opts = {
     accessToken: 'xxx',
     spaceId: 'xxx',
-    preview: false,
     addDataTo: {},
     contentTypes: [
       {
@@ -119,7 +118,6 @@ test.cb('returns valid content', t => {
   const api = new Contentful({
     accessToken: process.env.accessToken,
     spaceId: process.env.spaceId,
-    preview: false,
     addDataTo: locals,
     contentTypes: [
       {
@@ -170,7 +168,6 @@ test.cb('defaults id to name if not present', t => {
   const api = new Contentful({
     accessToken: process.env.accessToken,
     spaceId: process.env.spaceId,
-    preview: false,
     addDataTo: locals,
     contentTypes: [{ name: 'cat' }]
   })
@@ -186,7 +183,6 @@ test.cb('implements request options', t => {
   const api = new Contentful({
     accessToken: process.env.accessToken,
     spaceId: process.env.spaceId,
-    preview: false,
     addDataTo: locals,
     contentTypes: [
       {
@@ -210,7 +206,6 @@ test.cb('works with custom transform function', t => {
   const api = new Contentful({
     accessToken: process.env.accessToken,
     spaceId: process.env.spaceId,
-    preview: false,
     addDataTo: locals,
     contentTypes: [
       {
@@ -289,7 +284,6 @@ test.cb('accepts template object and generates html', t => {
   const contentful = new Contentful({
     accessToken: process.env.accessToken,
     spaceId: process.env.spaceId,
-    preview: false,
     addDataTo: locals,
     contentTypes: [
       {
@@ -339,7 +333,6 @@ test.cb('generates error if template has an error', t => {
   const contentful = new Contentful({
     accessToken: process.env.accessToken,
     spaceId: process.env.spaceId,
-    preview: false,
     addDataTo: locals,
     contentTypes: [
       {
